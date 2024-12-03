@@ -287,7 +287,8 @@ class ResourceName(_ResourceNameBase):
     @property
     def interface_type_const(self) -> constants.InterfaceType:
         try:
-            return getattr(constants.InterfaceType, self.interface_type.lower())
+            interface_type = self.interface_type.lower().replace("-", "_")
+            return getattr(constants.InterfaceType, interface_type)
         except Exception:
             return constants.InterfaceType.unknown
 
@@ -378,6 +379,56 @@ class GPIBIntfc(ResourceName):
 
     interface_type: ClassVar[str] = "GPIB"
     resource_class: ClassVar[str] = "INTFC"
+
+
+@register_subclass
+@dataclass
+class PrlgxUSBInstr(ResourceName):
+    """PRLGX-USB INSTR
+
+    The syntax is:
+    PRLGX-USB[board]::manufacturer ID::model code::serial number[::USB interface number]::INSTR
+    """
+
+    #: GPIB "board" to use.
+    board: str = "0"
+
+    #: ID of the instrument manufacturer.
+    manufacturer_id: str = ""
+
+    #: Code identifying the model of the instrument.
+    model_code: str = ""
+
+    #: Serial number of the instrument.
+    serial_number: str = ""
+
+    #: USB interface number.
+    usb_interface_number: str = "0"
+
+    interface_type: ClassVar[str] = "PRLGX-USB"
+    resource_class: ClassVar[str] = "INSTR"
+
+
+@register_subclass
+@dataclass
+class PrlgxTCPIPInstr(ResourceName):
+    """PRLGX-TCPIP INSTR
+
+    The syntax is:
+    PRLGX-TCPIP[board]::host address[::port]::INSTR
+    """
+
+    #: GPIB "board" to use.
+    board: str = "0"
+
+    #: Host address of the device (IPv4 or host name)
+    host_address: str = ""
+
+    #: Port on which to establish the connection
+    port: str = "1234"
+
+    interface_type: ClassVar[str] = "PRLGX-TCPIP"
+    resource_class: ClassVar[str] = "INSTR"
 
 
 @register_subclass
