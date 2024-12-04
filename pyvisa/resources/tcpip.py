@@ -55,12 +55,12 @@ class TCPIPSocket(MessageBasedResource):
     pass
 
 
-@Resource.register(constants.InterfaceType.prlgx_tcpip, "INSTR")
-class PrlgxTCPIPInstr(MessageBasedResource):
-    """Communicates with to devices of type PRLGX-TCPIP::host address::port::INSTR
+@Resource.register(constants.InterfaceType.prlgx_tcpip, "INTFC")
+class PrlgxTCPIPIntfc(MessageBasedResource):
+    """Communicates with to devices of type PRLGX-TCPIP::host address::port::INTFC
 
     More complex resource names can be specified with the following grammar:
-        PRLGX-TCPIP[board]::host address::port::INSTR
+        PRLGX-TCPIP[board]::host address::port::INTFC
 
     Do not instantiate directly, use
     :meth:`pyvisa.highlevel.ResourceManager.open_resource`.

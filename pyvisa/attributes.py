@@ -759,7 +759,7 @@ class AttrVI_ATTR_SEND_END_EN(BooleanAttribute):
         (constants.InterfaceType.asrl, "INSTR"),
         (constants.InterfaceType.gpib, "INSTR"),
         (constants.InterfaceType.gpib, "INTFC"),
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
         (constants.InterfaceType.usb, "INSTR"),
@@ -789,7 +789,7 @@ class AttrVI_ATTR_SUPPRESS_END_EN(BooleanAttribute):
     resources = [
         (constants.InterfaceType.asrl, "INSTR"),
         (constants.InterfaceType.gpib, "INSTR"),
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
         (constants.InterfaceType.usb, "INSTR"),
@@ -823,7 +823,7 @@ class AttrVI_ATTR_TERMCHAR_EN(BooleanAttribute):
         (constants.InterfaceType.gpib, "INSTR"),
         (constants.InterfaceType.gpib, "INTFC"),
         (constants.InterfaceType.asrl, "INSTR"),
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
         (constants.InterfaceType.usb, "INSTR"),
@@ -858,7 +858,7 @@ class AttrVI_ATTR_TERMCHAR(CharAttribute):
         (constants.InterfaceType.gpib, "INSTR"),
         (constants.InterfaceType.gpib, "INTFC"),
         (constants.InterfaceType.asrl, "INSTR"),
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
         (constants.InterfaceType.usb, "INSTR"),
@@ -894,7 +894,7 @@ class AttrVI_ATTR_IO_PROT(EnumAttribute):
         (constants.InterfaceType.gpib, "INTFC"),
         (constants.InterfaceType.gpib, "INSTR"),
         (constants.InterfaceType.asrl, "INSTR"),
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
         (constants.InterfaceType.usb, "INSTR"),
@@ -923,7 +923,7 @@ class AttrVI_ATTR_FILE_APPEND_EN(BooleanAttribute):
         (constants.InterfaceType.gpib, "INSTR"),
         (constants.InterfaceType.gpib, "INTFC"),
         (constants.InterfaceType.asrl, "INSTR"),
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
         (constants.InterfaceType.usb, "INSTR"),
@@ -957,7 +957,7 @@ class AttrVI_ATTR_RD_BUF_OPER_MODE(RangeAttribute):
         (constants.InterfaceType.gpib, "INSTR"),
         (constants.InterfaceType.gpib, "INTFC"),
         (constants.InterfaceType.asrl, "INSTR"),
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
         (constants.InterfaceType.usb, "INSTR"),
@@ -990,7 +990,7 @@ class AttrVI_ATTR_RD_BUF_SIZE(RangeAttribute):
         (constants.InterfaceType.gpib, "INSTR"),
         (constants.InterfaceType.gpib, "INTFC"),
         (constants.InterfaceType.asrl, "INSTR"),
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
         (constants.InterfaceType.usb, "INSTR"),
@@ -1028,7 +1028,7 @@ class AttrVI_ATTR_WR_BUF_OPER_MODE(RangeAttribute):
         (constants.InterfaceType.gpib, "INSTR"),
         (constants.InterfaceType.gpib, "INTFC"),
         (constants.InterfaceType.asrl, "INSTR"),
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
         (constants.InterfaceType.usb, "INSTR"),
@@ -1061,7 +1061,7 @@ class AttrVI_ATTR_WR_BUF_SIZE(RangeAttribute):
         (constants.InterfaceType.gpib, "INSTR"),
         (constants.InterfaceType.gpib, "INTFC"),
         (constants.InterfaceType.asrl, "INSTR"),
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
         (constants.InterfaceType.usb, "INSTR"),
@@ -1098,7 +1098,7 @@ class AttrVI_ATTR_DMA_ALLOW_EN(BooleanAttribute):
         (constants.InterfaceType.gpib, "INTFC"),
         (constants.InterfaceType.pxi, "INSTR"),
         (constants.InterfaceType.asrl, "INSTR"),
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
         (constants.InterfaceType.usb, "INSTR"),
@@ -1127,7 +1127,7 @@ class AttrVI_ATTR_TCPIP_ADDR(Attribute):
     """
 
     resources = [
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
     ]
@@ -1151,7 +1151,7 @@ class AttrVI_ATTR_TCPIP_HOSTNAME(Attribute):
     """
 
     resources = [
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "INSTR"),
         (constants.InterfaceType.tcpip, "SOCKET"),
     ]
@@ -1175,7 +1175,7 @@ class AttrVI_ATTR_TCPIP_PORT(RangeAttribute):
     """
 
     resources = [
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "SOCKET"),
     ]
 
@@ -1218,7 +1218,7 @@ class AttrVI_ATTR_TCPIP_NODELAY(BooleanAttribute):
     """
 
     resources = [
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "SOCKET"),
     ]
 
@@ -1244,7 +1244,7 @@ class AttrVI_ATTR_TCPIP_KEEPALIVE(BooleanAttribute):
     """
 
     resources = [
-        (constants.InterfaceType.prlgx_tcpip, "INSTR"),
+        (constants.InterfaceType.prlgx_tcpip, "INTFC"),
         (constants.InterfaceType.tcpip, "SOCKET"),
     ]
 

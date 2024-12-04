@@ -383,11 +383,11 @@ class GPIBIntfc(ResourceName):
 
 @register_subclass
 @dataclass
-class PrlgxUSBInstr(ResourceName):
-    """PRLGX-USB INSTR
+class PrlgxUSBIntfc(ResourceName):
+    """PRLGX-USB INTFC
 
     The syntax is:
-    PRLGX-USB[board]::manufacturer ID::model code::serial number[::USB interface number]::INSTR
+    PRLGX-USB[board]::manufacturer ID::model code::serial number[::USB interface number]::INTFC
     """
 
     #: GPIB "board" to use.
@@ -406,16 +406,16 @@ class PrlgxUSBInstr(ResourceName):
     usb_interface_number: str = "0"
 
     interface_type: ClassVar[str] = "PRLGX-USB"
-    resource_class: ClassVar[str] = "INSTR"
+    resource_class: ClassVar[str] = "INTFC"
 
 
 @register_subclass
 @dataclass
-class PrlgxTCPIPInstr(ResourceName):
-    """PRLGX-TCPIP INSTR
+class PrlgxTCPIPIntfc(ResourceName):
+    """PRLGX-TCPIP INTFC
 
     The syntax is:
-    PRLGX-TCPIP[board]::host address[::port]::INSTR
+    PRLGX-TCPIP[board]::host address[::port]::INTFC
     """
 
     #: GPIB "board" to use.
@@ -428,7 +428,7 @@ class PrlgxTCPIPInstr(ResourceName):
     port: str = "1234"
 
     interface_type: ClassVar[str] = "PRLGX-TCPIP"
-    resource_class: ClassVar[str] = "INSTR"
+    resource_class: ClassVar[str] = "INTFC"
 
 
 @register_subclass
