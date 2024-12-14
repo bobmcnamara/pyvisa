@@ -383,29 +383,20 @@ class GPIBIntfc(ResourceName):
 
 @register_subclass
 @dataclass
-class PrlgxUSBIntfc(ResourceName):
-    """PRLGX-USB INTFC
+class PrlgxASRLIntfc(ResourceName):
+    """PRLGX-ASRL INTFC
 
     The syntax is:
-    PRLGX-USB[board]::manufacturer ID::model code::serial number[::USB interface number]::INTFC
+    PRLGX-ASRL[board]::serial device::INTFC
     """
 
     #: GPIB "board" to use.
     board: str = "0"
 
-    #: ID of the instrument manufacturer.
-    manufacturer_id: str = ""
+    #: Serial device to use.
+    serial_device: str = ""
 
-    #: Code identifying the model of the instrument.
-    model_code: str = ""
-
-    #: Serial number of the instrument.
-    serial_number: str = ""
-
-    #: USB interface number.
-    usb_interface_number: str = "0"
-
-    interface_type: ClassVar[str] = "PRLGX-USB"
+    interface_type: ClassVar[str] = "PRLGX-ASRL"
     resource_class: ClassVar[str] = "INTFC"
 
 

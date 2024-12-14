@@ -821,7 +821,7 @@ class InterfaceType(enum.IntEnum):
     vicp = 36000  # FIXME
 
     #: prologix usb
-    prlgx_usb = 34567
+    prlgx_asrl = 34567
 
     #: prologix tcpip
     prlgx_tcpip = 76543
